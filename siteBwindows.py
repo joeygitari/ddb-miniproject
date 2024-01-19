@@ -18,6 +18,10 @@ local_stream = psycopg2.connect(
     port='5432',
     database='ddb-miniproject',
     user='',
-    password=''
-)
+    password='')
+
+# preparing a cursor object for the PostgresSQL database
+local_cursor = local_stream.cursor()
+
+
 
