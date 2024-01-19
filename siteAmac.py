@@ -1,27 +1,45 @@
 import pyodbc
 import mysql.connector
 
-# Connecting to the MySQL database on MacOS
-mysql_connection = mysql.connector.connect(
-    host="192.168.100.9",
-    port="3306",
-    user="root",
-    passwd="",
-    database="ddb-miniproject"
-)
+# Initialize connection variables
+mysql_connection = None
+mssql_connection = None
 
-# Preparing a cursor object for the MySQL database
-mysql_cursor = mysql_connection.cursor(buffered=True)
+# Connecting to the MySQL database on MacOS
+try:
+    mysql_connection = mysql.connector.connect(
+        host="192.168.100.9",
+        port="3306",
+        user="root",
+        passwd="",
+        database="ddb-miniproject"
+    )
+
+    print("Connected to MySQL database successfully.")
+except mysql.connector.Error as err:
+    print(f"MySQL Connection Error: {err}")
+
+# Check if the connection was successful before proceeding
+if mysql_connection:
+    # Preparing a cursor object for the MySQL database
+    mysql_cursor = mysql_connection.cursor(buffered=True)
 
 # Connecting to the MSSQL database on Windows
-mssql_connection = pyodbc.connect(
-    driver='{ODBC Driver 17 for SQL Server}', 
-    server='Moh',
-    database='ddb-miniproject',
-    user='root',
-    password='',
-    trusted_connection='yes'
-)
+try:
+    mssql_connection = pyodbc.connect(
+        driver='{ODBC Driver 17 for SQL Server}',
+        server='Moh',
+        database='ddb-miniproject',
+        user='root',
+        password='',
+        trusted_connection='yes'
+    )
 
-# Preparing a cursor object for the MSSQL database
-mssql_cursor = mssql_connection.cursor()
+    print("Connected to MSSQL database successfully.")
+except pyodbc.Error as err:
+    print(f"MSSQL Connection Error: {err}")
+
+# Check if the connection was successful before proceeding
+if mssql_connection:
+    # Preparing a cursor object for the MSSQL database
+    mssql_cursor = mssql_connection.cursor()
