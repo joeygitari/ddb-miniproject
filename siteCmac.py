@@ -8,7 +8,7 @@ mssql_connection = None
 # Connecting to PostgresSQL on Mac
 try:
     postgres_connection = psycopg2.connect(
-        host='192.168.100.9',
+        host='localhost',
         port='5432',
         database='ddb-miniproject',
         user='joeygitari',
@@ -28,7 +28,7 @@ if postgres_connection:
 try:
     mssql_connection = pyodbc.connect(
         driver='{ODBC Driver 17 for SQL Server}',
-        server='MOH',
+        server='192.168.100.23',
         database='ddb-miniproject',
         user='root',
         password='',

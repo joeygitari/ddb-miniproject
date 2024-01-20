@@ -8,7 +8,7 @@ mssql_connection = None
 # Connecting to the MySQL database on MacOS
 try:
     mysql_connection = mysql.connector.connect(
-        host="192.168.100.9",
+        host="localhost",
         port="3306",
         user="root",
         passwd="",
@@ -28,7 +28,7 @@ if mysql_connection:
 try:
     mssql_connection = pyodbc.connect(
         driver='{ODBC Driver 17 for SQL Server}',
-        server='Moh',
+        server='192.168.100.23',
         database='ddb-miniproject',
         user='root',
         password='',
