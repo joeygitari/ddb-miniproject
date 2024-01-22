@@ -28,11 +28,11 @@ if mysql_connection:
 try:
     mssql_connection = pyodbc.connect(
         driver='{ODBC Driver 17 for SQL Server}',
-        server='192.168.100.23',
+        server='moh.mshome.net',
         database='ddb-miniproject',
-        user='root',
-        password='',
-        trusted_connection='yes'
+        user='joeygitari',
+        password='pookie',
+        trusted_connection='no'
     )
 
     print("Connected to MSSQL database successfully.")
