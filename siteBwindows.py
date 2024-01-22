@@ -8,7 +8,7 @@ local_stream = None
 # Connecting to the MySQL database on the MAC machine
 try:
     mysql_database_connection = mysql.connector.connect(
-        host="192.168.0.106",
+        host="192.168.137.196",
         port="3306",
         user="root",
         passwd="",
@@ -26,7 +26,7 @@ if mysql_database_connection:
 # connecting to the PostgresSQL database on the MAC machine
 try:
     local_stream = psycopg2.connect(
-        host='192.168.0.106',
+        host='192.168.137.196',
         port='5432',
         database='ddb-miniproject',
         user='joeygitari',
