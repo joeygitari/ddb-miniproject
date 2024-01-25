@@ -72,7 +72,7 @@ CREATE TABLE Flights (
 -- insert flights data
 INSERT INTO Flights (flightID, travellerID, flightName, departureLocation, arrivalLocation, departureDate, departureTime, arrivalDate, arrivalTime)
 VALUES
-    (1, 1, 'Flight X', 'USA', 'Canada','2024-02-02', '08:00', '2024-02-02', '10'),
+    (1, 1, 'Flight X', 'USA', 'Canada','2024-02-02', '08:00', '2024-02-02', '10:00'),
     (2, 2, 'Flight Y', 'Canada', 'USA', '2024-04-02', '09:00', '2024-04-02','11:00'),
     (3, 3, 'Flight Z', 'USA', 'Wakanda','2024-05-06', '10:00', '2024-05-08','14:00'),
     (4, 4, 'Stark Industries Flight', 'USA', 'Sokovia', '2024-12-02','12:00', '2024-12-03','15:00'),
