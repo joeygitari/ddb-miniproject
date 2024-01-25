@@ -62,10 +62,10 @@ CREATE TABLE Flights (
     flightName VARCHAR(100),
     departureLocation VARCHAR(50),
     arrivalLocation VARCHAR(50),
-    departureDate DATETIME,
-    departureTime DATETIME,
-    arrivalDate DATETIME,
-    arrivalTime DATETIME,
+    departureDate DATE,
+    departureTime TIME,
+    arrivalDate DATE,
+    arrivalTime TIME,
     FOREIGN KEY (travellerID) REFERENCES Travellers(travellerID)
 );
 
