@@ -1,8 +1,3 @@
--- Check if the database exists, if not, create it
-CREATE DATABASE ddb_miniproject;
-
-USE ddb_miniproject;
-
 -- travellers table
 CREATE TABLE Travellers (
     travellerID INT PRIMARY KEY,
@@ -67,7 +62,9 @@ CREATE TABLE Flights (
     flightName VARCHAR(100),
     departureLocation VARCHAR(50),
     arrivalLocation VARCHAR(50),
+    departureDate DATETIME,
     departureTime DATETIME,
+    arrivalDate DATETIME,
     arrivalTime DATETIME,
     FOREIGN KEY (travellerID) REFERENCES Travellers(travellerID)
 );
