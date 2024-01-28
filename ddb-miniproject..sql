@@ -1,4 +1,5 @@
--- travellers table
+USE `ddb-miniproject`;
+
 CREATE TABLE Travellers (
     travellerID INT PRIMARY KEY,
     travellerName VARCHAR(50),
@@ -9,20 +10,20 @@ CREATE TABLE Travellers (
 -- insert travellers data
 INSERT INTO Travellers (travellerID, travellerName, travellerAge, travellerCountry)
 VALUES
-    (1, 'John Doe', 15, 'USA'),
+    (1, 'John Doe', 15, 'Kenya'),
     (2, 'Jane Smith', 10, 'Canada'),
-    (3, 'Alice Johnson', 22, 'USA'),
+    (3, 'Alice Johnson', 22, 'Kenya'),
     (4, 'Tony Stark', 40, 'USA'),
-    (5, 'Steve Rogers', 56, 'USA'),
+    (5, 'Steve Rogers', 56, 'Wakanda'),
     (6, 'Natasha Romanoff', 35, 'Russia'),
     (7, 'Thor Odinson', 50, 'Asgard'),
     (8, 'Bruce Banner', 30, 'USA'),
     (9, 'Peter Parker', 20, 'USA'),
     (10, 'TChalla', 35, 'Wakanda'),
-    (11, 'Carol Danvers', 30, 'USA'),
-    (12, 'Stephen Strange', 45, 'USA'),
-    (13, 'Peter Quill', 40, 'USA'),
-    (14, 'Wanda Maximoff', 30, 'Sokovia'),
+    (11, 'Carol Danvers', 30, 'Canada'),
+    (12, 'Stephen Strange', 45, 'Canada'),
+    (13, 'Peter Quill', 40, 'Asgard'),
+    (14, 'Wanda Maximoff', 30, 'Kenya'),
     (15, 'Scott Lang', 45, 'USA');
 
 -- Hotels table
