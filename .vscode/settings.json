@@ -1,0 +1,43 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "192.168.0.102",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "database": "ddb-miniproject",
+            "name": "DDB",
+            "username": "joeygitari"
+        },
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "192.168.0.117",
+            "port": 1433,
+            "askForPassword": true,
+            "driver": "MSSQL",
+            "name": "DDB",
+            "database": "ddb-miniproject",
+            "username": "joeygitari"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "192.168.0.102",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "DDB",
+            "database": "ddb-miniproject",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}

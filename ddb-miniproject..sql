@@ -1,4 +1,4 @@
-USE `ddb-miniproject`;
+-- USE `ddb-miniproject`;
 
 CREATE TABLE Travellers (
     travellerID INT PRIMARY KEY,
@@ -120,3 +120,42 @@ VALUES
     (13, 13, 13, 13, '2024-11-19'),
     (14, 14, 14, 14, '2024-04-03'),
     (15, 15, 15, 15, '2024-05-05');
+
+-- application 1
+-- USE `ddb-miniproject`;
+SELECT travellerName
+FROM Travellers
+INNER JOIN Bookings
+	ON Travellers.travellerID = Bookings.travellerID
+WHERE bookingDate >= 02-02-2024;
+
+
+-- application 2
+-- USE `ddb-miniproject`;
+SELECT Travellers.travellerName, Hotels.hotelName, Hotels.price
+FROM Hotels
+INNER JOIN Travellers 
+	ON Hotels.travellerID = Travellers.travellerID
+WHERE Travellers.travellerAge > 18;
+
+-- application 3
+-- USE `ddb-miniproject`;
+SELECT COUNT(Bookings.flightID)
+FROM Bookings
+INNER JOIN Flights
+    ON Bookings.flightID = Flights.flightID
+WHERE Flights.departureLocation = 'USA';
+
+
+-- fragment 1
+-- USE `ddb-miniproject`;
+SELECT * 
+FROM Travellers
+WHERE travellerAge > 18;
+
+-- fragment 2
+-- USE `ddb-miniproject`;
+SELECT * 
+FROM Travellers
+WHERE travellerAge < 18;
+
