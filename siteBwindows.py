@@ -102,7 +102,7 @@ def reconstruction():
     local_cursor.execute(query1)
     query1_update = local_cursor.fetchall()
     print(" ")
-    print("HotelsA18U300 table: (travellerAge < 18) && (price > 300)")
+    print("HotelsU18A300 table: (travellerAge < 18) && (price > 300)")
     print(tabulate(query1_update,headers=["hotelName","price"]))
     print("")
 
@@ -140,7 +140,7 @@ def reconstruction():
     print("")
     print("HotelsA18U300 table: (travellerAge > 18) && (price < 300)")
     print("")
-    print(tabulate(query4_update, headers=["travellerAge", "price"]))
+    print(tabulate(query4_update, headers=["hotelName", "price"]))
     print("")
 
     # Doing reconstrcution of dhf3 and dhf4
