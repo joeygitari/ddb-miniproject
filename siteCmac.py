@@ -69,7 +69,7 @@ if postgres_connection:
     print("")
 
     # Create fragment F3 which has arrival details with affinities A6, A7 and A8(arrivalLocation, arrivalDate, arrivalTime)
-    print("F2 = Arrival Details: flightID, arrivalLocation, arrivalDate, arrivalTime FROM Flights:")
+    print("F3 = Arrival Details: flightID, arrivalLocation, arrivalDate, arrivalTime FROM Flights:")
     print("")
     Q3 = "SELECT flightID, arrivalLocation, arrivalDate, arrivalTime FROM Flights"
     postgres_cursor.execute(Q3)
