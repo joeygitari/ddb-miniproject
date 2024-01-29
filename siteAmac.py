@@ -91,10 +91,10 @@ if mysql_connection:
     #End
 
     mysql_cursor.execute("DROP TABLE IF EXISTS HotelsU18A300")
-    mysql_cursor.execute("CREATE TABLE IF NOT EXISTS HotelsU18A300 (SELECT Hotels.hotelName, Hotels.price FROM Hotels INNER JOIN TravellersU18 ON TravellersU18.travellerID = Hotels.travellerID WHERE Hotels.price > 300);")
+    mysql_cursor.execute("CREATE TABLE IF NOT EXISTS HotelsU18A300 (SELECT Hotels.hotelName, Hotels.price FROM Hotels INNER JOIN TravellersU18 ON TravellersU18.travellerID = Hotels.travellerID WHERE Hotels.price < 300);")
     mysql_cursor.execute("SELECT * FROM HotelsU18A300")
     a300_result = mysql_cursor.fetchall()
-    print("HotelsU18A300: Hotels with price > 300 x TravellerU18:")
+    print("HotelsU18A300: Hotels with price < 300 x TravellerU18:")
     print("")
     print(tabulate(a300_result, headers=["hotelName", "price"]))
     print("")

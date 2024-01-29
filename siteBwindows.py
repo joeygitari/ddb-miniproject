@@ -138,7 +138,7 @@ def reconstruction():
     cursorObject.execute(query4)
     query4_update = cursorObject.fetchall()
     print("")
-    print("HotelsA18U300 table: (travellerAge > 18) && (price > 300)")
+    print("HotelsA18U300 table: (travellerAge > 18) && (price < 300)")
     print("")
     print(tabulate(query4_update, headers=["travellerAge", "price"]))
     print("")
@@ -163,7 +163,7 @@ def reconstruction():
     final_merge = local_cursor.fetchall()
     print("Reconstructed table: HotelsA18A300 && HotelsA18U300 && HotelsU18A300 && HotelsU18U300) ")
     print("")
-    print(tabulate(final_merge, headers=["hotelName","price"]))
+    print(tabulate(final_merge, headers=[]))
     print("")
 
 
